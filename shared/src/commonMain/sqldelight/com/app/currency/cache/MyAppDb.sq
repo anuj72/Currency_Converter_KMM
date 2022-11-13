@@ -1,0 +1,31 @@
+CREATE TABLE CurrencyValue(
+    key TEXT NOT NULL PRIMARY KEY ,
+    value TEXT NOT NULL
+);
+
+CREATE TABLE CurrencyName(
+    key TEXT NOT NULL PRIMARY KEY ,
+    name TEXT NOT NULL
+);
+
+
+deleteAllCurrencyValue:
+DELETE FROM CurrencyValue;
+
+getAllCurrencyValue:
+SELECT * FROM CurrencyValue;
+
+getAllCurrencyName:
+SELECT * FROM CurrencyName;
+
+insertAllCurrencyValue:
+INSERT OR REPLACE
+INTO
+CurrencyValue(key,value)
+VALUES ( ?,? ) ;
+
+insertAllCurrencyName:
+INSERT OR REPLACE
+INTO
+CurrencyName(key,name)
+VALUES ( ?,? ) ;

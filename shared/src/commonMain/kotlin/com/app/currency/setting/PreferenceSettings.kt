@@ -19,7 +19,7 @@ object PreferenceSettings {
     }
 
     fun getDateLocals():String{
-        return preferences.getString(dateTime,"").toInstant().toString()
+        return preferences.getString(dateTime,"").toString()
     }
 
 }
